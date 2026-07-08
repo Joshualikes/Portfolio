@@ -1,3 +1,4 @@
+import resumePdf from '../assets/Antonio Joshua ATS Resume.pdf'
 import {
   SiHtml5,
   SiCss,
@@ -6,11 +7,8 @@ import {
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
-  SiExpress,
-  SiMongodb,
   SiPostgresql,
   SiGit,
-  SiDocker,
 } from 'react-icons/si'
 
 export const personalInfo = {
@@ -26,11 +24,11 @@ export const personalInfo = {
   email: 'joshualikes09282@gmail.com',
   phone: '+63 956 681 2276',
   location: 'Philippines',
-  resumeUrl: '#',
+  resumeUrl: resumePdf,
   social: {
     github: 'https://github.com/Joshualikes',
     linkedin: 'https://www.linkedin.com/in/joshua-antonio-1412ba18b/',
-    twitter: 'https://twitter.com',
+    facebook: 'https://www.facebook.com/Mr.Antonio28/',
     email: 'mailto:joshualikes09282@gmail.com',
   },
 }
@@ -45,18 +43,13 @@ export const navLinks = [
 
 export const aboutFeatures = [
   {
-    title: 'Clean Code',
-    description: 'Writing maintainable, scalable code following best practices.',
+    title: 'Full-Stack Development',
+    description: 'Building responsive and scalable web applications with modern frontend and backend technologies.',
     icon: 'code',
   },
   {
-    title: 'Problem Solver',
-    description: 'Analytical thinker who enjoys tackling complex challenges.',
-    icon: 'puzzle',
-  },
-  {
-    title: 'Fast Learner',
-    description: 'Quick to adapt to new technologies and frameworks.',
+    title: 'Multimedia Editing',
+    description: 'Producing engaging multimedia content through professional video editing, photo enhancement, and graphic design.',
     icon: 'rocket',
   },
   {
@@ -74,11 +67,8 @@ export const skills = [
   { name: 'React', icon: SiReact, color: '#61DAFB' },
   { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
   { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-  { name: 'Express.js', icon: SiExpress, color: '#ffffff' },
-  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
   { name: 'SQL', icon: SiPostgresql, color: '#4169E1' },
   { name: 'Git', icon: SiGit, color: '#F05032' },
-  { name: 'Docker', icon: SiDocker, color: '#2496ED' },
 ]
 
 export const projects = [
@@ -90,29 +80,29 @@ export const projects = [
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop',
     badge: 'Full Stack',
     badgeColor: 'purple',
-    tags: ['React', 'Node.js', 'Vite', 'Typescript', 'Arduino', 'Supabase ', 'Unity Vuforia'],
+    tags: ['React', 'Vite', 'Typescript', 'Arduino', 'Supabase ', 'Unity Vuforia'],
     link: '#',
   },
   {
-    title: 'E-Commerce Platform',
+    title: 'Virtue Verse A bible story coloring game app',
     description:
-      'Modern online store with payment integration, inventory management, and admin dashboard for seamless shopping.',
+      'Virtue Verse is an interactive Bible story coloring game designed to teach values to children through gamified learning. The app combines Bible stories, coloring activities, and engaging gameplay to make learning about faith, kindness, honesty, and compassion both fun and educational.',
     image:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=340&fit=crop',
     badge: 'Full Stack',
     badgeColor: 'purple',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
+    tags: ['React Native', 'Supabase', 'Typescript', 'Tailwind', 'Next.js'],
     link: '#',
   },
   {
-    title: 'Task Management App',
+    title: 'World War II Learning Game with AI Scanner',
     description:
       'Collaborative project management tool with kanban boards, time tracking, and team communication features.',
     image:
       'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=340&fit=crop',
     badge: 'Frontend',
     badgeColor: 'blue',
-    tags: ['React', 'TypeScript', 'Tailwind'],
+    tags: ['React', 'TypeScript', 'Tailwind', 'Supabase', 'Vite', 'JavaScript'],
     link: '#',
   },
 ]
@@ -121,5 +111,5 @@ export const footerServices = [
   'Web Development',
   'Frontend Development',
   'Backend Development',
-  'API Development',
+  'Editing',
 ]

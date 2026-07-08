@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiDownload } from 'react-icons/fi'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
 import { personalInfo } from '../data/portfolioData'
 import CodeEditor from './CodeEditor'
@@ -11,7 +11,7 @@ export default function Hero() {
   const socialLinks = [
     { icon: FaGithub, href: social.github, label: 'GitHub' },
     { icon: FaLinkedin, href: social.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, href: social.twitter, label: 'Twitter' },
+    { icon: FaFacebook, href: social.facebook, label: 'Facebook' },
     { icon: SiGmail, href: social.email, label: 'Gmail' },
   ]
 
@@ -46,6 +46,7 @@ export default function Hero() {
             </a>
             <a
               href={personalInfo.resumeUrl}
+              download="Joshua-Antonio-Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 border border-theme-strong hover:border-blue-500/50 text-theme-primary font-semibold text-sm rounded-lg transition-colors"
             >
               <FiDownload />

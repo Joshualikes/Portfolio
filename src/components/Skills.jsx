@@ -18,7 +18,7 @@ export default function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {skills.map((skill, index) => {
             const Icon = skill.icon
             return (
@@ -29,7 +29,7 @@ export default function Skills() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -6, scale: 1.05 }}
-                className="flex flex-col items-center gap-3 p-4 rounded-xl bg-theme-card border border-theme hover:border-theme-strong transition-colors cursor-default group"
+                className="flex flex-col items-center gap-3 p-4 w-24 sm:w-28 rounded-xl bg-theme-card border border-theme hover:border-theme-strong transition-colors cursor-default group"
               >
                 <Icon
                   size={36}

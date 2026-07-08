@@ -31,7 +31,7 @@
   --theme-constellation-2: rgba(59, 130, 246, 0.06);
   --theme-selection: rgba(59, 130, 246, 0.25);
   --theme-footer-bg: #f1f5f9;
-  --theme-image-overlay: rgba(248, 250, 252, 0.5);
+  --theme-image-overlay: transparent;
 }
 
 [data-theme="dark"] {

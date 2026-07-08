@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { navLinks, personalInfo } from '../data/portfolioData'
+import logo from '../assets/Logo.png'
 import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
@@ -27,8 +28,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const initial = personalInfo.name.charAt(0).toUpperCase()
-
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -42,9 +41,11 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white shadow-lg group-hover:scale-105 transition-transform">
-            {initial}/
-          </div>
+          <img
+            src={logo}
+            alt={`${personalInfo.fullName} logo`}
+            className="w-10 h-10 rounded-lg object-contain shadow-lg group-hover:scale-105 transition-transform"
+          />
           <div className="hidden sm:block">
             <p className="font-bold text-sm tracking-wider text-theme-primary">
               {personalInfo.fullName.toUpperCase()}

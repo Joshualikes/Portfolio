@@ -1,8 +1,8 @@
 import { FiArrowUp, FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 import { personalInfo, navLinks, footerServices } from '../data/portfolioData'
+import logo from '../assets/Logo.png'
 
 export default function Footer() {
-  const initial = personalInfo.name.charAt(0).toUpperCase()
   const year = new Date().getFullYear()
 
   const scrollToTop = () => {
@@ -15,9 +15,11 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-xs text-white">
-                {initial}/
-              </div>
+              <img
+                src={logo}
+                alt={`${personalInfo.fullName} logo`}
+                className="w-9 h-9 rounded-lg object-contain"
+              />
               <div>
                 <p className="font-bold text-sm text-theme-primary">{personalInfo.fullName.toUpperCase()}</p>
                 <p className="text-[10px] text-theme-subtle">{personalInfo.title.toUpperCase()}</p>
