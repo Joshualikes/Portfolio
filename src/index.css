@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+@theme {
+  --color-accent-blue: #3b82f6;
+  --color-accent-purple: #8b5cf6;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root,
+[data-theme="light"] {
+  --theme-bg-primary: #f8fafc;
+  --theme-bg-secondary: #f1f5f9;
+  --theme-bg-card: #ffffff;
+  --theme-bg-section: rgba(226, 232, 240, 0.5);
+  --theme-bg-navbar: rgba(248, 250, 252, 0.92);
+  --theme-text-primary: #0f172a;
+  --theme-text-secondary: #334155;
+  --theme-text-muted: #64748b;
+  --theme-text-subtle: #94a3b8;
+  --theme-border: rgba(15, 23, 42, 0.1);
+  --theme-border-strong: rgba(15, 23, 42, 0.18);
+  --theme-toggle-border: rgba(15, 23, 42, 0.12);
+  --theme-toggle-text: #64748b;
+  --theme-toggle-hover-text: #0f172a;
+  --theme-toggle-hover-border: rgba(15, 23, 42, 0.22);
+  --theme-glow: rgba(59, 130, 246, 0.12);
+  --theme-constellation-1: rgba(139, 92, 246, 0.06);
+  --theme-constellation-2: rgba(59, 130, 246, 0.06);
+  --theme-selection: rgba(59, 130, 246, 0.25);
+  --theme-footer-bg: #f1f5f9;
+  --theme-image-overlay: rgba(248, 250, 252, 0.5);
+}
+
+[data-theme="dark"] {
+  --theme-bg-primary: #020617;
+  --theme-bg-secondary: #0f172a;
+  --theme-bg-card: #0f172a;
+  --theme-bg-section: rgba(10, 15, 26, 0.5);
+  --theme-bg-navbar: rgba(2, 6, 23, 0.9);
+  --theme-text-primary: #f8fafc;
+  --theme-text-secondary: #cbd5e1;
+  --theme-text-muted: #94a3b8;
+  --theme-text-subtle: #64748b;
+  --theme-border: rgba(255, 255, 255, 0.05);
+  --theme-border-strong: rgba(255, 255, 255, 0.2);
+  --theme-toggle-border: rgba(255, 255, 255, 0.1);
+  --theme-toggle-text: #94a3b8;
+  --theme-toggle-hover-text: #f8fafc;
+  --theme-toggle-hover-border: rgba(255, 255, 255, 0.2);
+  --theme-glow: rgba(59, 130, 246, 0.15);
+  --theme-constellation-1: rgba(139, 92, 246, 0.08);
+  --theme-constellation-2: rgba(59, 130, 246, 0.08);
+  --theme-selection: rgba(59, 130, 246, 0.35);
+  --theme-footer-bg: #020617;
+  --theme-image-overlay: rgba(2, 6, 23, 0.6);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--theme-bg-primary);
+  color: var(--theme-text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--theme-selection);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px var(--theme-glow);
+}
+
+.constellation-bg {
+  background-image:
+    radial-gradient(circle at 20% 50%, var(--theme-constellation-1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, var(--theme-constellation-2) 0%, transparent 50%);
+}
+
+.theme-toggle {
+  border-color: var(--theme-toggle-border);
+  color: var(--theme-toggle-text);
+  background-color: transparent;
+}
+
+.theme-toggle:hover {
+  color: var(--theme-toggle-hover-text);
+  border-color: var(--theme-toggle-hover-border);
+}
+
+.bg-theme-primary {
+  background-color: var(--theme-bg-primary);
+}
+
+.bg-theme-secondary {
+  background-color: var(--theme-bg-secondary);
+}
+
+.bg-theme-card {
+  background-color: var(--theme-bg-card);
+}
+
+.bg-theme-section {
+  background-color: var(--theme-bg-section);
+}
+
+.bg-theme-navbar {
+  background-color: var(--theme-bg-navbar);
+}
+
+.bg-theme-footer {
+  background-color: var(--theme-footer-bg);
+}
+
+.text-theme-primary {
+  color: var(--theme-text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--theme-text-secondary);
+}
+
+.text-theme-muted {
+  color: var(--theme-text-muted);
+}
+
+.text-theme-subtle {
+  color: var(--theme-text-subtle);
+}
+
+.border-theme {
+  border-color: var(--theme-border);
+}
+
+.border-theme-strong {
+  border-color: var(--theme-border-strong);
+}
+
+.hover-text-theme:hover {
+  color: var(--theme-text-primary);
+}
