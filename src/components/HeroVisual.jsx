@@ -13,7 +13,7 @@ const codeSnippet = [
 ]
 
 const floatingIcons = [
-  { Icon: SiReact, color: '#61DAFB', delay: 0, x: '88%', y: '8%' },
+  { Icon: SiReact, color: '#61DAFB', delay: 0, x: '95%', y: '8%' },
   { Icon: SiNodedotjs, color: '#339933', delay: 0.4, x: '95%', y: '60%' },
   { Icon: SiTypescript, color: '#3178C6', delay: 0.8, x: '-5%', y: '72%' },
   { Icon: SiGit, color: '#F05032', delay: 1.2, x: '-5%', y: '18%' },
