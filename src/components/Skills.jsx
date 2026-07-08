@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { skills } from '../data/portfolioData'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Skills() {
+  const { isDark } = useTheme()
   return (
     <section id="skills" className="py-24 px-6 lg:px-8 bg-theme-section">
       <div className="max-w-7xl mx-auto">
@@ -21,6 +23,7 @@ export default function Skills() {
         <div className="flex flex-wrap justify-center gap-6">
           {skills.map((skill, index) => {
             const Icon = skill.icon
+            const iconColor = !isDark && skill.lightColor ? skill.lightColor : skill.color
             return (
               <motion.div
                 key={skill.name}
@@ -33,7 +36,7 @@ export default function Skills() {
               >
                 <Icon
                   size={36}
-                  style={{ color: skill.color }}
+                  style={{ color: iconColor }}
                   className="group-hover:drop-shadow-lg transition-all"
                 />
                 <span className="text-xs text-theme-muted font-medium">{skill.name}</span>

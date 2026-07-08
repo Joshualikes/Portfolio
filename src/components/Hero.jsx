@@ -3,7 +3,7 @@ import { FiArrowRight, FiDownload } from 'react-icons/fi'
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
 import { personalInfo } from '../data/portfolioData'
-import CodeEditor from './CodeEditor'
+import HeroVisual from './HeroVisual'
 
 export default function Hero() {
   const { name, tagline, description, social } = personalInfo
@@ -16,13 +16,15 @@ export default function Hero() {
   ]
 
   return (
-    <section id="home" className="min-h-screen pt-28 pb-16 px-6 lg:px-8 constellation-bg">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
+    <section id="home" className="min-h-screen pt-28 pb-16 px-6 lg:px-8 constellation-bg flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-center lg:text-left"
+          >
           <p className="text-purple-400 text-sm font-medium tracking-widest mb-4">
             HELLO, I&apos;M
           </p>
@@ -34,9 +36,9 @@ export default function Hero() {
             {tagline.split('web applications.')[0]}
             <span className="text-purple-400">web applications.</span>
           </p>
-          <p className="text-theme-muted max-w-lg mb-8 leading-relaxed">{description}</p>
+          <p className="text-theme-muted max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">{description}</p>
 
-          <div className="flex flex-wrap gap-4 mb-10">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">
             <a
               href="#projects"
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-lg transition-colors shadow-lg shadow-blue-600/25"
@@ -56,7 +58,7 @@ export default function Hero() {
 
           <div>
             <p className="text-xs text-theme-subtle tracking-widest mb-3">CONNECT WITH ME</p>
-            <div className="flex gap-4">
+            <div className="flex justify-center lg:justify-start gap-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -71,16 +73,10 @@ export default function Hero() {
               ))}
             </div>
           </div>
-        </motion.div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="hidden lg:block"
-        >
-          <CodeEditor />
-        </motion.div>
+          <HeroVisual />
+        </div>
       </div>
     </section>
   )

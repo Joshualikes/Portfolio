@@ -65,7 +65,7 @@ export const skills = [
   { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
   { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
   { name: 'React', icon: SiReact, color: '#61DAFB' },
-  { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff', lightColor: '#000000' },
   { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
   { name: 'SQL', icon: SiPostgresql, color: '#4169E1' },
   { name: 'Git', icon: SiGit, color: '#F05032' },
@@ -76,8 +76,6 @@ export const projects = [
     title: 'AR-Based Urban Gardening Assistant',
     description:
       'A smart gardening system that combines Augmented Reality (AR), an AI Scanner Camera, and IoT sensors to help users identify plants, visualize planting guides, monitor environmental conditions, and receive real-time gardening recommendations for healthier plant growth.',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop',
     badge: 'Full Stack',
     badgeColor: 'purple',
     tags: ['React', 'Vite', 'Typescript', 'Arduino', 'Supabase ', 'Unity Vuforia'],
@@ -87,8 +85,6 @@ export const projects = [
     title: 'Virtue Verse A bible story coloring game app',
     description:
       'Virtue Verse is an interactive Bible story coloring game designed to teach values to children through gamified learning. The app combines Bible stories, coloring activities, and engaging gameplay to make learning about faith, kindness, honesty, and compassion both fun and educational.',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=340&fit=crop',
     badge: 'Full Stack',
     badgeColor: 'purple',
     tags: ['React Native', 'Supabase', 'Typescript', 'Tailwind', 'Next.js'],
@@ -97,11 +93,9 @@ export const projects = [
   {
     title: 'World War II Learning Game with AI Scanner',
     description:
-      'Collaborative project management tool with kanban boards, time tracking, and team communication features.',
-    image:
-      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=340&fit=crop',
-    badge: 'Frontend',
-    badgeColor: 'blue',
+      'World War II Learning Game with AI Scanner is an educational mobile application that enhances history learning through interactive gameplay and AI-powered image recognition. The app allows users to scan historical images and artifacts to access detailed information, quizzes, and engaging content about World War II.',
+    badge: 'Full Stack',
+    badgeColor: 'purple',
     tags: ['React', 'TypeScript', 'Tailwind', 'Supabase', 'Vite', 'JavaScript'],
     link: '#',
   },
@@ -111,5 +105,5 @@ export const footerServices = [
   'Web Development',
   'Frontend Development',
   'Backend Development',
-  'Editing',
+  'Photo & Video Editing',
 ]
